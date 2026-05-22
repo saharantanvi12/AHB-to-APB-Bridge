@@ -59,3 +59,6 @@ B.Tech Electronics and Computer Engineering
 
 ### Waveform 2
 ![Waveform2](Results/WhatsApp%20Image%202026-05-21%20at%2015.26.24.jpeg)
+## Documentation
+
+- [Project Report](Docs/AHB_APB_Bridge_Report.pdf)

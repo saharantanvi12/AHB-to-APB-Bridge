@@ -52,3 +52,10 @@ The design is verified using a Verilog testbench that checks read and write tran
 ## Author
 Tanvi Saharan
 B.Tech Electronics and Computer Engineering
+## Simulation Results
+
+### Waveform 1
+![Waveform1](Results/WhatsApp%20Image%202026-05-21%20at%2015.29.41.jpeg)
+
+### Waveform 2
+![Waveform2](Results/WhatsApp%20Image%202026-05-21%20at%2015.26.24.jpeg)

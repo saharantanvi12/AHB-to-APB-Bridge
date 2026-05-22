@@ -1,63 +1,53 @@
-# AHB-to-APB-Bridge
+# AHB to APB Bridge
 
 ## Overview
-This project implements an AHB to APB Bridge using Verilog HDL. The bridge converts high-speed AHB transactions into low-power APB transactions while maintaining protocol compatibility.
+This project implements an AHB to APB Bridge using Verilog HDL. The bridge converts high-speed AHB transactions into APB transactions, enabling communication between high-performance and low-power peripherals in AMBA-based SoCs.
 
 ## Features
 - AHB Slave Interface
 - APB Controller
-- FSM-Based Design
-- Read Transactions
-- Write Transactions
-- Verilog HDL Implementation
+- Address Decoder
+- FSM-Based Control Logic
+- Read and Write Transaction Support
+- Verilog RTL Implementation
 - Functional Verification using Testbench
 
 ## Project Structure
 
-AHB-to-APB-Bridge
-│
-├── RTL/
-│ ├── ahb_slave_interface.v
-│ ├── apb_controller.v
-│ ├── bridge_fsm.v
-│ └── bridge_top.v
-│
-├── Verification/
-│ └── bridge_tb.v
-│
-├── Docs/
-│ ├── Report.pdf
-│ └── Block_Diagram.png
-│
-├── Results/
-│ └── Waveforms
-│
-└── README.md
+RTL/
+- ahb_apb_bridge.v
+- ahb_bus.v
+- apb_bus.v
+- decoder.v
+- fsm.v
 
-## Block Diagram
-(Add block diagram image here)
+Verification/
+- testbench.v
 
-## FSM States
-- IDLE
-- READ
-- WRITE
-- WRITEP
-- RENABLE
-- WENABLE
-- WENABLEP
+## Modules
 
-## Simulation
-The design was verified using a Verilog testbench and waveform analysis.
+### ahb_apb_bridge
+Top-level bridge module connecting AHB and APB interfaces.
+
+### ahb_bus
+Handles AHB-side transaction signals.
+
+### apb_bus
+Generates APB protocol control signals.
+
+### decoder
+Decodes incoming addresses and selects peripherals.
+
+### fsm
+Controls bridge operation through state transitions.
+
+## Verification
+The design is verified using a Verilog testbench that checks read and write transactions.
 
 ## Tools Used
 - Verilog HDL
-- ModelSim / Vivado
+- Xilinx Vivado
 - GitHub
-
-## Applications
-- AMBA-Based SoC Design
-- Embedded Systems
-- Digital VLSI Design
 
 ## Author
 Tanvi Saharan

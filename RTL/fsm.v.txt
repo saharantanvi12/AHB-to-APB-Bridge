@@ -1,0 +1,44 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 21.05.2026 15:06:43
+// Design Name: 
+// Module Name: fsm
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module fsm(
+    input clk,
+    input start,
+    output reg psel_out,
+    output reg penable
+);
+
+always @(posedge clk)
+begin
+    if(start)
+    begin
+        psel_out <= 1'b1;
+        penable  <= ~penable;
+    end
+    else
+    begin
+        psel_out <= 1'b0;
+        penable  <= 1'b0;
+    end
+end
+
+endmodule
